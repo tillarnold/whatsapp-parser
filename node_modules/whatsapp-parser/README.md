@@ -6,9 +6,9 @@
 ```js
 var whatsapp = require('whatsapp-parser')
   , parsed = whatsapp.parseFile('./chat_export.txt')
-  
+
 parsed.forEach (function(message){
- console.log(message.date, ":", message.name, ":", message.name) 
+ console.log(message.date, ":", message.name, ":", message.name)
 })
 
 ```
@@ -16,7 +16,7 @@ parsed.forEach (function(message){
 #var whatsapp = require('whatsapp-parser')
 
 ##whatsapp.parse(text)
-Parses the given string and returns an array of objects 
+Parses the given string and returns an array of objects
 
 ```js
 [
@@ -28,7 +28,7 @@ Parses the given string and returns an array of objects
 ```
 
 ##whatsapp.parseFile(path)
-Does the same as 
+Does the same as
 ```js
 whatsapp.parse(fs.readFileSync(path,'utf8'))
 ```
@@ -40,4 +40,5 @@ whatsapp.parse(fs.readFileSync(path,'utf8'))
   - they are parsed as messages by a user named "system"
 
 ## Release History
+* 2015-04-21   v0.2.0  Now works with browserify. 
 * 2015-04-21   v0.1.0  Initial version. 

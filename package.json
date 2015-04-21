@@ -10,6 +10,6 @@
     "stylus": "^0.50.0"
   },
   "dependencies": {
-    "whatsapp-parser": "^0.1.0"
+    "whatsapp-parser": "^0.2.0"
   }
 }

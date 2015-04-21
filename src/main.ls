@@ -115,38 +115,37 @@ filterUI = (initProps, compairMethods, initData, userRender) ->
 
 let
   whatsapp = require 'whatsapp-parser'
-  fields = <[name message date]>
+  fields = <[name msg date]>
   methods =
     is: (val, pattern) ->
       val == pattern
     contains: (val, pattern) ->
-      val.contains pattern
+      val.indexOf(pattern) > -1
     regex: (val, pattern) ->
       val.match new RegExp pattern
   render = (e) ->
     meta = createDiv \meta
     name = createDiv \name e.name
     date = createDiv \date e.date
-    msg = createDiv \msg e.message
+    msg = createDiv \msg e.msg
 
     meta `appendChildren` [ name, date ]
     [ meta, msg ]
 
 
-  ui = filterUI fields, methods, {}, render
+  ui = filterUI fields, methods, [], render
   ui.start!
   ui.addSkin \basic-flex-layout
   ui.addSkin \color-skin
   ui.addSkin \padding-skin
 
   handleFileSelect = (evt ) ->
-    console.log 'handeling', evt
     file = evt.target.files[0]
     reader = new FileReader()
 
     reader.onload = (e) ->
-      console.log e
-      ui.setData whatsapp.parse(e.target.result)
+      data = whatsapp.parse(e.target.result)
+      ui.setData data
     reader.readAsText file
 
   document.getElementById \upload .addEventListener \change handleFileSelect
