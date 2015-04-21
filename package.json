@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-parser",
+  "version": "0.0.1",
+  "description": "Parse whatsapp logs. For Android and IOS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tillarnold/whatsapp-parser"
+  },
+  "keywords": [
+    "whatsapp"
+  ],
+  "author": "Till Arnold",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^0.19.0"
+  },
+  "dependencies": {
+    "pegjs": "^0.8.0"
+  }
+}
