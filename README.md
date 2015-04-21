@@ -39,3 +39,5 @@ whatsapp.parse(fs.readFileSync(path,'utf8'))
 - Can't parse the "system messages". (like "Johann Wolfgang von Goethe created group “unicorns and rainbows”")
   - they are parsed as messages by a user named "system"
 
+## Release History
+* 2015-04-21   v0.1.0  Initial version. 
