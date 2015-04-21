@@ -1,24 +1,15 @@
 {
-  "name": "whatsapp-parser",
-  "version": "0.1.0",
-  "description": "Parse whatsapp logs. For Android and IOS",
-  "main": "index.js",
   "scripts": {
-    "lint": "eslint *.js"
+    "buildStylus": "stylus src/main.styl -o dist/main.css",
+    "buildBrowserify": "browserify -t liveify -e src/main.ls > dist/bundle.js",
+    "build": "npm run buildStylus && npm run buildBrowserify"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tillarnold/whatsapp-parser"
-  },
-  "keywords": [
-    "whatsapp"
-  ],
-  "author": "Till Arnold",
-  "license": "MIT",
   "devDependencies": {
-    "eslint": "^0.19.0"
+    "browserify": "^9.0.8",
+    "liveify": "^2.0.0",
+    "stylus": "^0.50.0"
   },
   "dependencies": {
-    "pegjs": "^0.8.0"
+    "whatsapp-parser": "^0.1.0"
   }
 }

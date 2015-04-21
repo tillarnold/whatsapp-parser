@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+.basic-flex-layout {
+  display: flex;
+  flex: 1;
+}
+.basic-flex-layout .filterUI-box {
+  flex-shrink: 0;
+}
+.basic-flex-layout .filterUI-coll {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  flex: 1;
+}
+.basic-flex-layout .filterUI-buttonPanel {
+  flex-shrink: 0;
+  display: flex;
+}
+.basic-flex-layout .filterUI-filterButton {
+  flex: 1;
+}
+.padding-skin .filterUI-filterButton {
+  padding: 0.5rem;
+  margin: 0.2rem;
+}
+.padding-skin .filterUI-buttonPanel {
+  margin-bottom: 1rem;
+}
+.padding-skin .filterUI-coll {
+  padding: 1rem;
+}
+.padding-skin .filterUI-box {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+}
+.color-skin .filterUI-filterBox {
+  background: #ff4136;
+}
+.color-skin .filterUI-msgBox {
+  background: #01ff70;
+}
+.color-skin .filterUI-filter {
+  background: #ff851b;
+}
+.color-skin .filterUI-display {
+  background: #2ecc40;
+}
+.meta {
+  display: flex;
+  border-bottom: 1px solid #000;
+}
+.name,
+.date {
+  flex: 1;
+}
+.date {
+  text-align: right;
+}
+.msg {
+  padding: 0.5rem;
+}
