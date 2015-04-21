@@ -4,7 +4,8 @@
   "description": "Parse whatsapp logs. For Android and IOS",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint *.js"
+    "lint": "eslint index.js",
+    "build-parser": "pegjs chatParser.pegjs"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,7 @@
   "author": "Till Arnold",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^0.19.0"
-  },
-  "dependencies": {
+    "eslint": "^0.19.0",
     "pegjs": "^0.8.0"
   }
 }
