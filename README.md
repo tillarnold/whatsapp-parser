@@ -1,7 +1,7 @@
 # whatsapp-parser
 [![devDependency Status](https://david-dm.org/tillarnold/whatsapp-parser/dev-status.svg)](https://david-dm.org/tillarnold/whatsapp-parser#info=devDependencies)
 
-> Parse whatsapp logs. For Android and IOS
+> Parse whatsapp log for Android and iOS.
 
 ```js
 var whatsapp = require('whatsapp-parser')
